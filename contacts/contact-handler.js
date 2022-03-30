@@ -31,7 +31,7 @@ router.get('/:contactID', function getContactRoute(req, res, next) {
 const createContactSchema = zod.object({
   firstName: zod.string(),
   lastName: zod.string(),
-  email: zod.string(),
+  email: zod.string().email(),
   phone: zod.string(),
 });
 

@@ -22,6 +22,8 @@ function createContact(contact) {
   const newContact = {
     id: (contacts.length + 1).toString(),
     ...contact,
+    updatedAt:new Date().toISOString,
+    createdAt: new Date().toISOString 
   };
 
   contacts.push(newContact);
@@ -36,6 +38,7 @@ function updateContactById(id, contact) {
   const newContactInfo = {
     ...oldContactInfo,
     ...contact,
+    updatedAt: new Date().toISOString(),
   };
 
   contacts[index] = newContactInfo;
